@@ -1,0 +1,1 @@
+# SecretGuard-CLI-An-LLM-Powered-Hard-Coded-Secret-Scanner-for-Secure-Codebases

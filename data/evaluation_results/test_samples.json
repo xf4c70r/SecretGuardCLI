@@ -1,0 +1,304 @@
+{
+    "test_cases": [
+      {
+        "id": "aws_1",
+        "code": "const accessKey = \"AKIA1234567890EXAMPLE\";",
+        "expected": "Yes",
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_2", 
+        "code": "AWS_ACCESS_KEY_ID = \"AKIA9876543210EXAMPLE\"",
+        "expected": "Yes",
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_3",
+        "code": "export AWS_SECRET_ACCESS_KEY=\"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+        "expected": "Yes", 
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_4",
+        "code": "aws_key = \"AKIA\" + \"1234567890EXAMPLE\"",
+        "expected": "Yes",
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_5",
+        "code": "const config = { awsAccessKeyId: \"AKIA5555666677778888\" };",
+        "expected": "Yes",
+        "category": "aws_key"
+      },
+      {
+        "id": "github_1",
+        "code": "const token = \"ghp_1234567890abcdef1234567890abcdef123456\";",
+        "expected": "Yes",
+        "category": "github_token"
+      },
+      {
+        "id": "github_2",
+        "code": "GITHUB_TOKEN=ghp_abcdef1234567890abcdef1234567890123456",
+        "expected": "Yes",
+        "category": "github_token"
+      },
+      {
+        "id": "github_3",
+        "code": "headers = {'Authorization': 'token ghp_9999888877776666555544443333222211110000'}",
+        "expected": "Yes",
+        "category": "github_token"
+      },
+      {
+        "id": "github_4",
+        "code": "git_token = \"ghp_\" + \"0123456789abcdef0123456789abcdef01234567\"",
+        "expected": "Yes",
+        "category": "github_token"
+      },
+      {
+        "id": "github_5",
+        "code": "const authHeader = `Bearer ghp_fedcba0987654321fedcba0987654321fedcba09`;",
+        "expected": "Yes",
+        "category": "github_token"
+      },
+      {
+        "id": "api_1",
+        "code": "const apiKey = \"sk-1234567890abcdef1234567890abcdef\";",
+        "expected": "Yes",
+        "category": "api_key"
+      },
+      {
+        "id": "api_2",
+        "code": "OPENAI_API_KEY=\"sk-abcdef1234567890abcdef1234567890abcdef12\"",
+        "expected": "Yes",
+        "category": "api_key"
+      },
+      {
+        "id": "api_3",
+        "code": "stripe_key = \"sk_live_1234567890abcdef1234567890abcdef\"",
+        "expected": "Yes",
+        "category": "api_key"
+      },
+      {
+        "id": "api_4",
+        "code": "const key = \"pk_test_\" + \"1234567890abcdef1234567890abcdef\"",
+        "expected": "Yes",
+        "category": "api_key"
+      },
+      {
+        "id": "api_5",
+        "code": "api_secret = \"sk_\" + generate_random_string(48)",
+        "expected": "Yes",
+        "category": "api_key"
+      },
+      {
+        "id": "password_1",
+        "code": "const password = \"MySecretPassword123!\";",
+        "expected": "Yes",
+        "category": "password"
+      },
+      {
+        "id": "password_2",
+        "code": "DATABASE_PASSWORD=\"super_secret_pass_2024\"",
+        "expected": "Yes",
+        "category": "password"
+      },
+      {
+        "id": "password_3",
+        "code": "user_pass = \"admin123password\"",
+        "expected": "Yes",
+        "category": "password"
+      },
+      {
+        "id": "password_4",
+        "code": "const dbPass = \"P@ssw0rd2024!\";",
+        "expected": "Yes",
+        "category": "password"
+      },
+      {
+        "id": "password_5",
+        "code": "login_password = \"secretAdminPass\"",
+        "expected": "Yes",
+        "category": "password"
+      },
+      {
+        "id": "jwt_1",
+        "code": "const jwt = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\";",
+        "expected": "Yes",
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_2",
+        "code": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIn0.Gf1zK1W8z8z8z8z8z8z8z8z8z8z8z8z8z8z8z8z8z8z",
+        "expected": "Yes",
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_3",
+        "code": "token = \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tIn0.signature\"",
+        "expected": "Yes",
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_4",
+        "code": "const accessToken = \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.payload.signature\";",
+        "expected": "Yes",
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_5",
+        "code": "jwt_secret = \"eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTYxNjIzOTAyMiwiaWF0IjoxNjE2MjM5MDIyfQ.signature\";",
+        "expected": "Yes",
+        "category": "jwt_token"
+      },
+      {
+        "id": "db_1",
+        "code": "const dbUrl = \"mongodb://admin:password123@localhost:27017/mydb\";",
+        "expected": "Yes",
+        "category": "database_url"
+      },
+      {
+        "id": "db_2",
+        "code": "DATABASE_URL=\"postgresql://user:secret_pass@localhost:5432/db\"",
+        "expected": "Yes",
+        "category": "database_url"
+      },
+      {
+        "id": "db_3",
+        "code": "mysql_conn = \"mysql://root:admin123@127.0.0.1:3306/production\"",
+        "expected": "Yes",
+        "category": "database_url"
+      },
+      {
+        "id": "db_4",
+        "code": "redis_url = \"redis://user:password@redis-server:6379/0\"",
+        "expected": "Yes",
+        "category": "database_url"
+      },
+      {
+        "id": "db_5",
+        "code": "const connectionString = \"Server=localhost;Database=mydb;User Id=admin;Password=secretpass;\";",
+        "expected": "Yes",
+        "category": "database_url"
+      },
+      {
+        "id": "safe_1",
+        "code": "const userName = \"john_doe\";",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "safe_2",
+        "code": "function calculateSum(a, b) { return a + b; }",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "safe_3",
+        "code": "const config = { host: 'localhost', port: 3000 };",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "safe_4",
+        "code": "const isAuthenticated = checkUserAuth();",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "safe_5",
+        "code": "const publicEndpoint = \"https://api.example.com/public\";",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "safe_6",
+        "code": "import React from 'react';",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "safe_7",
+        "code": "const baseUrl = \"https://jsonplaceholder.typicode.com\";",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "safe_8",
+        "code": "function validateEmail(email) { return email.includes('@'); }",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "safe_9",
+        "code": "const userId = parseInt(req.params.id);",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "safe_10",
+        "code": "const logger = require('winston');",
+        "expected": "No",
+        "category": "safe"
+      },
+      {
+        "id": "env_1",
+        "code": "const apiKey = process.env.API_KEY;",
+        "expected": "No",
+        "category": "env_variable"
+      },
+      {
+        "id": "env_2",
+        "code": "const dbPassword = process.env.DATABASE_PASSWORD;",
+        "expected": "No",
+        "category": "env_variable"
+      },
+      {
+        "id": "env_3",
+        "code": "const secret = os.getenv('SECRET_KEY');",
+        "expected": "No",
+        "category": "env_variable"
+      },
+      {
+        "id": "env_4",
+        "code": "password = os.environ.get('DB_PASSWORD')",
+        "expected": "No",
+        "category": "env_variable"
+      },
+      {
+        "id": "env_5",
+        "code": "const token = System.getenv(\"GITHUB_TOKEN\");",
+        "expected": "No",
+        "category": "env_variable"
+      },
+      {
+        "id": "placeholder_1",
+        "code": "const password = \"YOUR_PASSWORD_HERE\";",
+        "expected": "No",
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_2",
+        "code": "API_KEY=\"replace_with_your_api_key\"",
+        "expected": "No",
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_3",
+        "code": "const secret = \"<INSERT_SECRET_HERE>\";",
+        "expected": "No",
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_4",
+        "code": "token = \"YOUR_TOKEN_HERE\"",
+        "expected": "No",
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_5",
+        "code": "const key = \"ENTER_YOUR_KEY\";",
+        "expected": "No",
+        "category": "placeholder"
+      }
+    ]
+  }

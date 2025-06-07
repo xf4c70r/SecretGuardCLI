@@ -1,0 +1,134 @@
+{
+  "overall_metrics": {
+    "accuracy": 0.40382978723404256,
+    "precision": 0.40400170285227754,
+    "recall": 0.9989473684210526,
+    "f1_score": 0.575325856320097,
+    "specificity": 0.0,
+    "false_positive_rate": 1.0,
+    "false_negative_rate": 0.0010526315789473684
+  },
+  "category_metrics": {
+    "safe": {
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0,
+      "sample_count": 2000
+    },
+    "api_key": {
+      "accuracy": 0.995,
+      "precision": 1.0,
+      "recall": 0.995,
+      "f1_score": 0.9974937343358395,
+      "specificity": 0,
+      "false_positive_rate": 0,
+      "false_negative_rate": 0.005,
+      "sample_count": 400
+    },
+    "aws_key": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "sample_count": 250
+    },
+    "placeholder": {
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0,
+      "sample_count": 300
+    },
+    "password": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "sample_count": 300
+    },
+    "database_url": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "sample_count": 200
+    },
+    "env_variable": {
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0,
+      "sample_count": 500
+    },
+    "github_token": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "sample_count": 300
+    },
+    "jwt_token": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "sample_count": 200
+    },
+    "aws_secret": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "sample_count": 250
+    }
+  },
+  "summary": {
+    "total_samples": 4700,
+    "correct_predictions": 1898,
+    "accuracy": 0.40382978723404256,
+    "categories_tested": 10
+  },
+  "model_info": {
+    "status": "loaded",
+    "device": "mps:0",
+    "hf_repo": "Salesforce/codegen-350M-mono",
+    "base_model": "Salesforce/codegen-350M-mono",
+    "quantization": true,
+    "model_type": "CodeGenForCausalLM"
+  },
+  "performance": {
+    "total_inference_time": 2371.649665117264,
+    "average_inference_time": 0.5046063117270774,
+    "predictions_per_second": 1.9817429484331588,
+    "errors": [],
+    "error_rate": 0.0
+  }
+}

@@ -1,0 +1,1105 @@
+{
+  "finetuned_results": {
+    "overall_metrics": {
+      "accuracy": 0.6,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1_score": 0.75,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0
+    },
+    "category_metrics": {
+      "aws_key": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "github_token": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "api_key": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "password": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "jwt_token": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "database_url": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "safe": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0,
+        "sample_count": 10
+      },
+      "env_variable": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0,
+        "sample_count": 5
+      },
+      "placeholder": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0,
+        "sample_count": 5
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        30
+      ]
+    ],
+    "detailed_results": [
+      {
+        "id": "aws_1",
+        "code": "const accessKey = \"AKIA1234567890EXAMPLE\";",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_2",
+        "code": "AWS_ACCESS_KEY_ID = \"AKIA9876543210EXAMPLE\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_3",
+        "code": "export AWS_SECRET_ACCESS_KEY=\"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_4",
+        "code": "aws_key = \"AKIA\" + \"1234567890EXAMPLE\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_5",
+        "code": "const config = { awsAccessKeyId: \"AKIA5555666677778888\" };",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "github_1",
+        "code": "const token = \"ghp_1234567890abcdef1234567890abcdef123456\";",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "github_2",
+        "code": "GITHUB_TOKEN=ghp_abcdef1234567890abcdef1234567890123456",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "github_3",
+        "code": "headers = {'Authorization': 'token ghp_9999888877776666555544443333222211110000'}",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "github_4",
+        "code": "git_token = \"ghp_\" + \"0123456789abcdef0123456789abcdef01234567\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "github_5",
+        "code": "const authHeader = `Bearer ghp_fedcba0987654321fedcba0987654321fedcba09`;",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "api_1",
+        "code": "const apiKey = \"sk-1234567890abcdef1234567890abcdef\";",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "api_2",
+        "code": "OPENAI_API_KEY=\"sk-abcdef1234567890abcdef1234567890abcdef12\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "api_3",
+        "code": "stripe_key = \"sk_live_1234567890abcdef1234567890abcdef\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "api_4",
+        "code": "const key = \"pk_test_\" + \"1234567890abcdef1234567890abcdef\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "api_5",
+        "code": "api_secret = \"sk_\" + generate_random_string(48)",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "password_1",
+        "code": "const password = \"MySecretPassword123!\";",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "password_2",
+        "code": "DATABASE_PASSWORD=\"super_secret_pass_2024\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "password_3",
+        "code": "user_pass = \"admin123password\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "password_4",
+        "code": "const dbPass = \"P@ssw0rd2024!\";",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "password_5",
+        "code": "login_password = \"secretAdminPass\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "jwt_1",
+        "code": "const jwt = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIi...",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_2",
+        "code": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ikpva...",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_3",
+        "code": "token = \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tIn0.signature\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_4",
+        "code": "const accessToken = \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.payload.signature\";",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_5",
+        "code": "jwt_secret = \"eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6Ikphd...",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "db_1",
+        "code": "const dbUrl = \"mongodb://admin:password123@localhost:27017/mydb\";",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "db_2",
+        "code": "DATABASE_URL=\"postgresql://user:secret_pass@localhost:5432/db\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "db_3",
+        "code": "mysql_conn = \"mysql://root:admin123@127.0.0.1:3306/production\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "db_4",
+        "code": "redis_url = \"redis://user:password@redis-server:6379/0\"",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "db_5",
+        "code": "const connectionString = \"Server=localhost;Database=mydb;User Id=admin;Password=secretpass;\";",
+        "expected": "Yes",
+        "predicted": "Yes",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "safe_1",
+        "code": "const userName = \"john_doe\";",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_2",
+        "code": "function calculateSum(a, b) { return a + b; }",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_3",
+        "code": "const config = { host: 'localhost', port: 3000 };",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_4",
+        "code": "const isAuthenticated = checkUserAuth();",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_5",
+        "code": "const publicEndpoint = \"https://api.example.com/public\";",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_6",
+        "code": "import React from 'react';",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_7",
+        "code": "const baseUrl = \"https://jsonplaceholder.typicode.com\";",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_8",
+        "code": "function validateEmail(email) { return email.includes('@'); }",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_9",
+        "code": "const userId = parseInt(req.params.id);",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_10",
+        "code": "const logger = require('winston');",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "env_1",
+        "code": "const apiKey = process.env.API_KEY;",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "env_2",
+        "code": "const dbPassword = process.env.DATABASE_PASSWORD;",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "env_3",
+        "code": "const secret = os.getenv('SECRET_KEY');",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "env_4",
+        "code": "password = os.environ.get('DB_PASSWORD')",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "env_5",
+        "code": "const token = System.getenv(\"GITHUB_TOKEN\");",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "placeholder_1",
+        "code": "const password = \"YOUR_PASSWORD_HERE\";",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_2",
+        "code": "API_KEY=\"replace_with_your_api_key\"",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_3",
+        "code": "const secret = \"<INSERT_SECRET_HERE>\";",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_4",
+        "code": "token = \"YOUR_TOKEN_HERE\"",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_5",
+        "code": "const key = \"ENTER_YOUR_KEY\";",
+        "expected": "No",
+        "predicted": "Yes",
+        "correct": false,
+        "category": "placeholder"
+      }
+    ],
+    "summary": {
+      "total_samples": 50,
+      "correct_predictions": 30,
+      "accuracy": 0.6,
+      "categories_tested": 9
+    },
+    "performance": {
+      "total_inference_time": 19.63835644721985,
+      "average_inference_time": 0.39276712894439697,
+      "predictions_per_second": 2.5460379097599266,
+      "errors": [],
+      "error_rate": 0.0
+    },
+    "model_info": {
+      "status": "loaded",
+      "device": "mps:0",
+      "hf_repo": "Salesforce/codegen-350M-mono",
+      "base_model": "Salesforce/codegen-350M-mono",
+      "quantization": true,
+      "model_type": "CodeGenForCausalLM"
+    }
+  },
+  "base_results": {
+    "overall_metrics": {
+      "accuracy": 0.6,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1_score": 0.75,
+      "specificity": 0.0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0
+    },
+    "category_metrics": {
+      "aws_key": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "github_token": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "api_key": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "password": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "jwt_token": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "database_url": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0.0,
+        "sample_count": 5
+      },
+      "safe": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0,
+        "sample_count": 10
+      },
+      "env_variable": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0,
+        "sample_count": 5
+      },
+      "placeholder": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "specificity": 0.0,
+        "false_positive_rate": 1.0,
+        "false_negative_rate": 0,
+        "sample_count": 5
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        30
+      ]
+    ],
+    "detailed_results": [
+      {
+        "id": "aws_1",
+        "code": "const accessKey = \"AKIA1234567890EXAMPLE\";",
+        "expected": "Yes",
+        "predicted": "const assistantName = \"Assistant\";\n<|",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_2",
+        "code": "AWS_ACCESS_KEY_ID = \"AKIA9876543210EXAMPLE\"",
+        "expected": "Yes",
+        "predicted": "AWS_SECRET_ACCESS_KEY",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_3",
+        "code": "export AWS_SECRET_ACCESS_KEY=\"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+        "expected": "Yes",
+        "predicted": "export AWS_SECRET_ACCESS_KEY",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_4",
+        "code": "aws_key = \"AKIA\" + \"1234567890EXAMPLE\"",
+        "expected": "Yes",
+        "predicted": "aws_secret = \"AKIA\" + \"",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "aws_5",
+        "code": "const config = { awsAccessKeyId: \"AKIA5555666677778888\" };",
+        "expected": "Yes",
+        "predicted": "const assistant = {\n  name: \"ass",
+        "correct": true,
+        "category": "aws_key"
+      },
+      {
+        "id": "github_1",
+        "code": "const token = \"ghp_1234567890abcdef1234567890abcdef123456\";",
+        "expected": "Yes",
+        "predicted": "const assistant_id = \"1234567890",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "github_2",
+        "code": "GITHUB_TOKEN=ghp_abcdef1234567890abcdef1234567890123456",
+        "expected": "Yes",
+        "predicted": "GITHUB_TOKEN=ghp_",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "github_3",
+        "code": "headers = {'Authorization': 'token ghp_9999888877776666555544443333222211110000'}",
+        "expected": "Yes",
+        "predicted": "headers = {'Authorization': 'token g",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "github_4",
+        "code": "git_token = \"ghp_\" + \"0123456789abcdef0123456789abcdef01234567\"",
+        "expected": "Yes",
+        "predicted": "<|user|>\n\n<|",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "github_5",
+        "code": "const authHeader = `Bearer ghp_fedcba0987654321fedcba0987654321fedcba09`;",
+        "expected": "Yes",
+        "predicted": "const assistant_id = `1`;",
+        "correct": true,
+        "category": "github_token"
+      },
+      {
+        "id": "api_1",
+        "code": "const apiKey = \"sk-1234567890abcdef1234567890abcdef\";",
+        "expected": "Yes",
+        "predicted": "const assistantId = \"assistant-12345",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "api_2",
+        "code": "OPENAI_API_KEY=\"sk-abcdef1234567890abcdef1234567890abcdef12\"",
+        "expected": "Yes",
+        "predicted": "OPENAI_API_KEY=\"sk-",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "api_3",
+        "code": "stripe_key = \"sk_live_1234567890abcdef1234567890abcdef\"",
+        "expected": "Yes",
+        "predicted": "stripe_secret = \"sk_live_",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "api_4",
+        "code": "const key = \"pk_test_\" + \"1234567890abcdef1234567890abcdef\"",
+        "expected": "Yes",
+        "predicted": "const assistant_id = \"assistant_id",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "api_5",
+        "code": "api_secret = \"sk_\" + generate_random_string(48)",
+        "expected": "Yes",
+        "predicted": "api_key = \"sk_\" + generate",
+        "correct": true,
+        "category": "api_key"
+      },
+      {
+        "id": "password_1",
+        "code": "const password = \"MySecretPassword123!\";",
+        "expected": "Yes",
+        "predicted": "const assistant_id = \"assistant_id",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "password_2",
+        "code": "DATABASE_PASSWORD=\"super_secret_pass_2024\"",
+        "expected": "Yes",
+        "predicted": "DATABASE_HOST=\"localhost\"",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "password_3",
+        "code": "user_pass = \"admin123password\"",
+        "expected": "Yes",
+        "predicted": "<|user|>\n<|user",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "password_4",
+        "code": "const dbPass = \"P@ssw0rd2024!\";",
+        "expected": "Yes",
+        "predicted": "const assistant = \"P@ssw0rd",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "password_5",
+        "code": "login_password = \"secretAdminPass\"",
+        "expected": "Yes",
+        "predicted": "<|ass",
+        "correct": true,
+        "category": "password"
+      },
+      {
+        "id": "jwt_1",
+        "code": "const jwt = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIi...",
+        "expected": "Yes",
+        "predicted": "const assistant = \"https://api.telegram",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_2",
+        "code": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ikpva...",
+        "expected": "Yes",
+        "predicted": "Authorization: Bearer eyJ0eX",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_3",
+        "code": "token = \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tIn0.signature\"",
+        "expected": "Yes",
+        "predicted": "token = \"eyJhbGciO",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_4",
+        "code": "const accessToken = \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.payload.signature\";",
+        "expected": "Yes",
+        "predicted": "const assistantToken = \"eyJ0eX",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "jwt_5",
+        "code": "jwt_secret = \"eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6Ikphd...",
+        "expected": "Yes",
+        "predicted": "jwt_algorithm = \"HS256\";",
+        "correct": true,
+        "category": "jwt_token"
+      },
+      {
+        "id": "db_1",
+        "code": "const dbUrl = \"mongodb://admin:password123@localhost:27017/mydb\";",
+        "expected": "Yes",
+        "predicted": "<|user|>\nDoes this code contain",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "db_2",
+        "code": "DATABASE_URL=\"postgresql://user:secret_pass@localhost:5432/db\"",
+        "expected": "Yes",
+        "predicted": "DATABASE_URL=\"postgresql",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "db_3",
+        "code": "mysql_conn = \"mysql://root:admin123@127.0.0.1:3306/production\"",
+        "expected": "Yes",
+        "predicted": "mysql_conn = \"mysql://root",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "db_4",
+        "code": "redis_url = \"redis://user:password@redis-server:6379/0\"",
+        "expected": "Yes",
+        "predicted": "redis_url = \"redis://user",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "db_5",
+        "code": "const connectionString = \"Server=localhost;Database=mydb;User Id=admin;Password=secretpass;\";",
+        "expected": "Yes",
+        "predicted": "<|ass",
+        "correct": true,
+        "category": "database_url"
+      },
+      {
+        "id": "safe_1",
+        "code": "const userName = \"john_doe\";",
+        "expected": "No",
+        "predicted": "const assistantName = \"assistant\";\n<",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_2",
+        "code": "function calculateSum(a, b) { return a + b; }",
+        "expected": "No",
+        "predicted": "function calculateDifference(a, b) {",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_3",
+        "code": "const config = { host: 'localhost', port: 3000 };",
+        "expected": "No",
+        "predicted": "<|ass",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_4",
+        "code": "const isAuthenticated = checkUserAuth();",
+        "expected": "No",
+        "predicted": "if (isAuthenticated) {\n    console",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_5",
+        "code": "const publicEndpoint = \"https://api.example.com/public\";",
+        "expected": "No",
+        "predicted": "const assistantEndpoint = \"https://api.",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_6",
+        "code": "import React from 'react';",
+        "expected": "No",
+        "predicted": "import React from 'react';\n<|app",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_7",
+        "code": "const baseUrl = \"https://jsonplaceholder.typicode.com\";",
+        "expected": "No",
+        "predicted": "const assistant = \"https://jsonplaceholder.",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_8",
+        "code": "function validateEmail(email) { return email.includes('@'); }",
+        "expected": "No",
+        "predicted": "function validatePassword(password) { return password.",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_9",
+        "code": "const userId = parseInt(req.params.id);",
+        "expected": "No",
+        "predicted": "const assistantId = parseInt(req.params",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "safe_10",
+        "code": "const logger = require('winston');",
+        "expected": "No",
+        "predicted": "<|ass",
+        "correct": false,
+        "category": "safe"
+      },
+      {
+        "id": "env_1",
+        "code": "const apiKey = process.env.API_KEY;",
+        "expected": "No",
+        "predicted": "const assistantName = \"\";\n<|ass",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "env_2",
+        "code": "const dbPassword = process.env.DATABASE_PASSWORD;",
+        "expected": "No",
+        "predicted": "const assistantName = process.env.ASSIST",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "env_3",
+        "code": "const secret = os.getenv('SECRET_KEY');",
+        "expected": "No",
+        "predicted": "<|code|>\n<|user|",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "env_4",
+        "code": "password = os.environ.get('DB_PASSWORD')",
+        "expected": "No",
+        "predicted": "db_name = os.environ.get",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "env_5",
+        "code": "const token = System.getenv(\"GITHUB_TOKEN\");",
+        "expected": "No",
+        "predicted": "const assistant_id = System.getenv(\"",
+        "correct": false,
+        "category": "env_variable"
+      },
+      {
+        "id": "placeholder_1",
+        "code": "const password = \"YOUR_PASSWORD_HERE\";",
+        "expected": "No",
+        "predicted": "const assistant_id = \"YOUR_ASS",
+        "correct": false,
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_2",
+        "code": "API_KEY=\"replace_with_your_api_key\"",
+        "expected": "No",
+        "predicted": "API_KEY=\"replace_with_your_",
+        "correct": false,
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_3",
+        "code": "const secret = \"<INSERT_SECRET_HERE>\";",
+        "expected": "No",
+        "predicted": "const assistant = \"<INSERT_ASSISTANT",
+        "correct": false,
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_4",
+        "code": "token = \"YOUR_TOKEN_HERE\"",
+        "expected": "No",
+        "predicted": "# This is a sample Python script.",
+        "correct": false,
+        "category": "placeholder"
+      },
+      {
+        "id": "placeholder_5",
+        "code": "const key = \"ENTER_YOUR_KEY\";",
+        "expected": "No",
+        "predicted": "const assistant = \"ENTER_YOUR_",
+        "correct": false,
+        "category": "placeholder"
+      }
+    ],
+    "summary": {
+      "total_samples": 50,
+      "correct_predictions": 30,
+      "accuracy": 0.6,
+      "categories_tested": 9
+    }
+  },
+  "comparison": {
+    "metric_comparison": {
+      "accuracy": {
+        "fine_tuned": 0.6,
+        "base_model": 0.6,
+        "improvement": 0.0,
+        "improvement_percentage": 0.0
+      },
+      "precision": {
+        "fine_tuned": 0.6,
+        "base_model": 0.6,
+        "improvement": 0.0,
+        "improvement_percentage": 0.0
+      },
+      "recall": {
+        "fine_tuned": 1.0,
+        "base_model": 1.0,
+        "improvement": 0.0,
+        "improvement_percentage": 0.0
+      },
+      "f1_score": {
+        "fine_tuned": 0.75,
+        "base_model": 0.75,
+        "improvement": 0.0,
+        "improvement_percentage": 0.0
+      },
+      "specificity": {
+        "fine_tuned": 0.0,
+        "base_model": 0.0,
+        "improvement": 0.0,
+        "improvement_percentage": 0
+      }
+    },
+    "improvement": {},
+    "summary": {
+      "average_improvement": 0.0,
+      "best_improvement": {
+        "fine_tuned": 0.6,
+        "base_model": 0.6,
+        "improvement": 0.0,
+        "improvement_percentage": 0.0
+      },
+      "total_samples": 50,
+      "recommendation": "Marginal improvement"
+    }
+  }
+}

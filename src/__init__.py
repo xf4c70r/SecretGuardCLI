@@ -1,0 +1,3 @@
+"""
+SecretGuard CLI package
+"""
